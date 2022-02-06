@@ -86,7 +86,7 @@ public class TrevorApp
         return income;
     }
 
-    public static double disposableIncome(double income, double expenses)
+    public double disposableIncome(double income, double expenses)
     {
         double disposableIncome = income - expenses;
         System.out.println("========================================");
@@ -98,7 +98,7 @@ public class TrevorApp
     {
         double totalExpense = totalExpenses(readAllExpenses());
         double income = income();
-        disposableIncome(income, totalExpense);
+        new TrevorApp().disposableIncome(income, totalExpense);
 
 
     }
