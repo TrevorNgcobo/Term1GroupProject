@@ -30,4 +30,17 @@ class TrevorAppTest
         Assertions.assertTimeout(Duration.ofNanos(1), budget.disposableIncome(85.50, 40) );
     }
 
+    @Test
+    public void testIdentity()
+    {
+        Expense obj = new Expense();
+        Assertions.assertSame(obj , budget.readAllExpenses());
+    }
+
+    @Test
+    public void failingTest()
+    {
+        Assertions.assertNotEquals(45.50, budget.disposableIncome(85.50, 40));
+    }
+
 }

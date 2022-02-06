@@ -10,6 +10,8 @@ public class Expense
     double additionalExpenseRands;
     String additionalExpense;
 
+    public Expense(){}
+
     public Expense(double grocery, double utilities, double transport, double saving, double entertainment, double additionalExpenseRands, String additionalExpense) {
         this.grocery = grocery;
         this.utilities = utilities;

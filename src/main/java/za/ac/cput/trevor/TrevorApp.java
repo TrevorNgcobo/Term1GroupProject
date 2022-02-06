@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class TrevorApp
 {
-    public static Expense readAllExpenses()
+    public  Expense readAllExpenses()
     {
         Scanner scn = new Scanner(System.in);
         System.out.println("This is a budgeting application. Enter your monthly spend.");
@@ -96,7 +96,7 @@ public class TrevorApp
 
     public static void main(String[] args)
     {
-        double totalExpense = totalExpenses(readAllExpenses());
+        double totalExpense = totalExpenses(new TrevorApp().readAllExpenses());
         double income = income();
         new TrevorApp().disposableIncome(income, totalExpense);
 
